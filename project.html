@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.language-selector i {
+    margin-left: 5px;
+}
+
+/* Filter and Sort Section */
+.filter-sort-section {
+    background-color: #f8f8f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-sort-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items-count {
+    font-weight: bold;
+}
+
+.filter-toggle a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.sort-options {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.sort-options i {
+    margin-left: 5px;
+}
+
+/* Product Grid Section */
+.product-grid {
+    padding: 40px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-top, .footer-middle, .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-subscribe {
+    max-width: 300px;
+}
+
+.footer-subscribe h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe p {
+    margin-bottom: 20px;
+}
+
+.footer-subscribe form {
+    display: flex;
+}
+
+.footer-subscribe input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    margin-right: 5px;
+}
+
+.footer-subscribe button {
+    padding: 10px 20px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+.footer-contact h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p, .footer-contact a {
+    margin-bottom: 10px;
+}
+
+.footer-links, .footer-quick-links {
+    max-width: 200px;
+}
+
+.footer-links ul, .footer-quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-quick-links li {
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    max-width: 200px;
+}
+
+.footer-social h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.payment-methods img {
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Colourful-Bird-Logo-Design.png" alt="Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#"><i class="fa fa-search"></i></a>
+                <a href="#"><i class="fa fa-heart"></i></a>
+                <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                <a href="#"><i class="fa fa-user"></i></a>
+                <div class="language-selector">
+                    <span>ENG</span> <i class="fa fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter and Sort Section -->
+    <section class="filter-sort-section">
+        <div class="container">
+            <div class="items-count">
+                <span>3426 Items</span>
+            </div>
+            <div class="filter-toggle">
+                <a href="#" id="filter-toggle-btn">Hide Filter <i class="fa fa-chevron-down"></i></a>
+            </div>
+            <div class="sort-options">
+                <span>Recommended <i class="fa fa-chevron-down"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="product-grid">
+        <div class="container">
+            <div class="grid">
+                <div class="product-card">
+                    <img src="360_F_110045173_QgmA3gg5OwTlLNQBqmPdFnkh6sPvsvt8.jpg" alt="Product 1">
+                    <h3>BAG</h3>
+                    <p>$99.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="pexels-kovyrina-12211.jpg" alt="Product 2">
+                    <h3>TOY</h3>
+                    <p>$79.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="71954z17lCL._AC_UY1100_.jpg" alt="Product 3">
+                    <h3>BELT</h3>
+                    <p>$49.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="ladoba-kids-tshirt-white-melange.jpg" alt="Product 4">
+                    <h3>T-SHIRT</h3>
+                    <p>$59.99</p>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+    </section>
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-subscribe">
+                <h4>BE THE FIRST TO KNOW</h4>
+                <p>Sign up for updates from mettā muse.</p>
+                <form>
+                    <input type="email" placeholder="Enter your e-mail..." required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+            <div class="footer-contact">
+                <h4>CONTACT US</h4>
+                <p>+44 221 133 5360</p>
+                <p><a href="mailto:customercare@mettamuse.com">customercare@mettamuse.com</a></p>
+                <h4>CURRENCY</h4>
+                <p><img src="download.jpg" alt="US Flag" width="45" height="40"> USD</p>
+                <p>Transactions will be completed in Euros and a currency reference is available on hover.</p>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-links">
+                <h4>mettā muse</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Artisans</a></li>
+                    <li><a href="#">Boutiques</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">EU Compliances Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-quick-links">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="#">Orders & Shipping</a></li>
+                    <li><a href="#">Join/Login as a Seller</a></li>
+                    <li><a href="#">Payment & Pricing</a></li>
+                    <li><a href="#">Return & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>FOLLOW US</h4>
+                <a href="#"><img src="download (1).jpg" alt="Instagram" width="20" height="40"></a>
+                <a href="#"><img src="download.png" alt="LinkedIn" width="20" height="40"></a>
+                <h4>mettā muse ACCEPTS</h4>
+                <div class="payment-methods">
+                    <img src="download (2).jpg" alt="Google Pay" width="20" height="40">
+                    <img src="download (3).jpg" alt="Mastercard" width="20" height="40">
+                    <img src="download (4).jpg" alt="Visa" width="20" height="40">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p> Copyright © 2023 mettamuse. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
